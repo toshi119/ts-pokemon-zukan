@@ -1,8 +1,8 @@
-import React from 'react';
-import { PokemonDetail } from '../App';
+import React from 'react'
+import { PokemonDetail } from '../App'
 
 interface CardProps {
-  pokemon: PokemonDetail;
+  pokemon: PokemonDetail
 }
 
 export const Card = ({ pokemon }: CardProps) => {
@@ -23,5 +23,5 @@ export const Card = ({ pokemon }: CardProps) => {
         <p className='title' style={{gridColumn: '1 / -1'}}>とくせい: {pokemon.ability}</p>
       </div>
     </div>
-  );
-};
+  )
+}
