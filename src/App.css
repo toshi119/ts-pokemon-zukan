@@ -169,7 +169,7 @@ body {
     margin: 0; /* marginをリセット */
     font-size: 1.4rem;
     text-transform: capitalize;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'DotGothic16', sans-serif;
 }
 
 .cardTypes {

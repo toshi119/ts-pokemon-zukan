@@ -20,7 +20,7 @@ export const Card = ({ pokemon }: CardProps) => {
       <div className='cardInfo'>
         <p className='title'>高さ: {pokemon.height / 10} m</p>
         <p className='title'>重さ: {pokemon.weight / 10} kg</p>
-        <p className='title' style={{gridColumn: '1 / -1'}}>とくせい: {pokemon.ability}</p>
+        <p className='title' style={{gridColumn: '1 / -1'}}>特性: {pokemon.ability}</p>
       </div>
     </div>
   )
