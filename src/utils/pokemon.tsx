@@ -14,7 +14,6 @@ export const getPokemon = async (url: string): Promise<PokemonDetail> => {
       throw new Error(`正しくレスポンスが返ってきませんでした, ${res.status}`)
     }
     const data = await res.json()
-    console.log('data', data)
 
     const formattedPokemon: PokemonDetail = {
       name: data.name,
