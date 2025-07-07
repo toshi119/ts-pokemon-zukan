@@ -1,5 +1,5 @@
 import React from 'react'
-import { PokemonDetail } from '../App'
+import { PokemonDetail } from '../utils/pokemon'
 
 interface CardProps {
   pokemon: PokemonDetail

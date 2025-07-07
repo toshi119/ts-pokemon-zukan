@@ -1,16 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
-import { getPokemon } from './utils/pokemon'
+import { getPokemon, PokemonDetail } from './utils/pokemon'
 import { Card } from './components/Card'
-
-export interface PokemonDetail {
-  name: string
-  imageUrl: string
-  types: string[]
-  height: number
-  weight: number
-  ability: string
-}
 
 const App = () => {
   const MAX_POKEMON_ID = 1025
@@ -20,28 +11,14 @@ const App = () => {
 
   const fetchRandomPokemon = async () => {
     setLoading(true)
-    setCurrentPokemon(null) // 表示をリセット
+    setCurrentPokemon(null)
 
     try {
-      // 1. ランダムなIDを生成
       const randomId = Math.floor(Math.random() * MAX_POKEMON_ID) + 1
       const url = `https://pokeapi.co/api/v2/pokemon/${randomId}`
 
-      // 2. ポケモンデータを取得
       const pokemonData = await getPokemon(url)
-
-      // 3. データをアプリで使う形式に整形
-      const formattedPokemon: PokemonDetail = {
-        name: pokemonData.name,
-        imageUrl: pokemonData.sprites.front_default,
-        types: pokemonData.types.map((typeInfo: { type: { name: string } }) => typeInfo.type.name),
-        height: pokemonData.height,
-        weight: pokemonData.weight,
-        ability: pokemonData.abilities[0]?.ability.name || '不明',
-      }
-
-      // 4. Stateを更新
-      setCurrentPokemon(formattedPokemon)
+      setCurrentPokemon(pokemonData)
     } catch (error) {
       console.error("ランダムなポケモンの取得に失敗しました。", error)
     } finally {

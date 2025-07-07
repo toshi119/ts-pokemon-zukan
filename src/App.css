@@ -1,4 +1,3 @@
-/* --- General Styles --- */
 body {
     background-color: #e6e6e6;
     font-family: 'DotGothic16', sans-serif;
@@ -11,10 +10,9 @@ body {
     box-sizing: border-box;
 }
 
-/* --- Pokedex Frame --- */
 .pokedex {
-    width: 100%;
-    max-width: 400px;
+    width: 300px;
+    max-width: 100%;
     height: auto;
     background-color: #d12a2f; /* Pokedex Red */
     border-radius: 20px;
@@ -58,7 +56,6 @@ body {
 .light.yellow { background-color: #feca57; }
 .light.green { background-color: #1dd1a1; }
 
-/* --- Pokedex Screen --- */
 .pokedex-screen-container {
     background-color: #222;
     padding: 10px;
@@ -92,7 +89,6 @@ body {
     padding: 10px;
 }
 
-/* --- Controls --- */
 .pokedex-controls {
     display: flex;
     justify-content: center;
@@ -128,18 +124,15 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-/* --- Card Component Styles (★ 修正箇所) --- */
 .card {
     width: 100%;
     height: 100%;
-    padding: 10px 15px; /* 上下のpaddingを少し調整 */
-    box-sizing: border-box;
+    padding: 10px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-around; を変更 */
-    justify-content: center; /* 全体を中央に寄せる */
-    gap: 10px; /* 各要素間のスペースを追加 */
+    justify-content: center;
+    gap: 10px;
     animation: fadeIn 0.5s ease;
 }
 
@@ -156,17 +149,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-bottom: 5px; を削除 (gapで管理) */
 }
 
 .cardImg img {
     width: 100%;
     height: 100%;
-    image-rendering: pixelated; /* ドット絵を綺麗に表示 */
+    image-rendering: pixelated;
 }
 
 .card h3 {
-    margin: 0; /* marginをリセット */
+    margin: 0;
     font-size: 1.4rem;
     text-transform: capitalize;
     font-family: 'DotGothic16', sans-serif;
@@ -175,7 +167,6 @@ body {
 .cardTypes {
     display: flex;
     gap: 10px;
-    /* margin-bottom: 10px; を削除 (gapで管理) */
 }
 
 .cardTypes span {
@@ -192,7 +183,7 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5px 15px; /* 縦と横のgapを調整 */
+    gap: 5px 15px;
 }
 
 .cardInfo .title {
@@ -200,7 +191,6 @@ body {
     margin: 0;
 }
 
-/* --- Type Colors --- */
 .type-normal { background-color: #A8A878; }
 .type-fire { background-color: #F08030; }
 .type-water { background-color: #6890F0; }
